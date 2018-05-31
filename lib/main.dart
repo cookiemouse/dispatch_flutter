@@ -11,7 +11,7 @@ ModifyPasswordPage _mModifyPasswordPage = new ModifyPasswordPage();
 
 void main() => runApp(new MaterialApp(
       title: '派工',
-      initialRoute: '/modifypassword',
+      initialRoute: '/',
       routes: {
         '/': (context) => new LoginPage(),
         '/managerhome': (context) => _mManagerHomePage,

@@ -8,7 +8,10 @@ class MinePage extends StatelessWidget {
       backgroundColor: Colors.grey[200],
       body: new Column(
         children: <Widget>[
-          new ModuleTitleNormal(title: '我的', color: Colors.blue,),
+          new ModuleTitleNormal(
+            title: '我的',
+            color: Colors.blue,
+          ),
           new Container(
             margin: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 0.0),
             padding: new EdgeInsets.fromLTRB(15.0, 8.0, 15.0, 8.0),
@@ -49,7 +52,13 @@ class MinePage extends StatelessWidget {
                     height: 24.0,
                   ),
                 ),
-                new Expanded(child: new Text('修改密码')),
+                new Expanded(
+                    child: new GestureDetector(
+                  child: new Text('修改密码'),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/modifypassword');
+                  },
+                )),
                 new Image.asset(
                   'images/module_all_icon_forward.png',
                   width: 32.0,
@@ -66,7 +75,7 @@ class MinePage extends StatelessWidget {
               children: <Widget>[
                 new Expanded(child: new Text('')),
                 new InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: new Text(
                     '退出登陆',
                     style: new TextStyle(color: Colors.blue, fontSize: 16.0),

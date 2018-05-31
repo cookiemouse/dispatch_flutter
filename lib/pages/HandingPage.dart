@@ -175,7 +175,7 @@ class _HandingPageState extends State {
         backgroundColor: Colors.transparent,
         body: new Column(
           children: <Widget>[
-            new ModuleTitleNormal(title: '待处理'),
+            new ModuleTitleNormal(title: '进行中'),
             new Container(
               margin: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
               decoration: ModuleDecoration.editRoundRectDecoration(),

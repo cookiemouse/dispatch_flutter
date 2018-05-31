@@ -175,7 +175,7 @@ class _OrderPageState extends State {
         backgroundColor: Colors.transparent,
         body: new Column(
           children: <Widget>[
-            new ModuleTitleOrder(title: '待处理'),
+            new ModuleTitleOrder(title: '订单任务'),
             new Container(
               margin: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
               decoration: ModuleDecoration.editRoundRectDecoration(),
