@@ -206,6 +206,7 @@ class _PendingPageState extends State {
             ),
             new Expanded(
               child: new ListView.builder(
+                padding: new EdgeInsets.only(top: 0.0),
                 itemCount: 100,
                 itemBuilder: makeItem,
               ),
