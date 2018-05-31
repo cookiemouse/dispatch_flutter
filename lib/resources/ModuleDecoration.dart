@@ -23,7 +23,7 @@ class ModuleDecoration {
     );
   }
 
-  static textRoundRectDecorationMore() {
+  static textRoundRectDecorationNormal() {
     Radius radius = new Radius.circular(15.0);
     return new ShapeDecoration(
       color: Colors.white,

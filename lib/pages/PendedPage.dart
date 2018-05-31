@@ -68,24 +68,30 @@ class _PendedPageState extends State {
             children: <Widget>[
               new Expanded(child: new Text('')),
               new Container(
-                decoration: ModuleDecoration.textRoundRectDecorationMore(),
+                decoration: ModuleDecoration.textRoundRectDecorationNormal(),
                 padding: const EdgeInsets.only(
                     left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
                 child: new Text('阿三'),
                 margin: const EdgeInsets.all(5.0),
               ),
               new Container(
-                decoration: ModuleDecoration.textRoundRectDecorationMore(),
+                decoration: ModuleDecoration.textRoundRectDecorationNormal(),
                 padding: const EdgeInsets.only(
                     left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
                 child: new Text('查看路线'),
                 margin: const EdgeInsets.all(5.0),
               ),
               new Container(
-                decoration: ModuleDecoration.textRoundRectDecorationMore(),
+                decoration: ModuleDecoration.textRoundRectDecorationNormal(),
                 padding: const EdgeInsets.only(
                     left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                child: new Text('快速派单'),
+                child: new Container(
+                  width: 80.0,
+                  child: new Text(
+                    '宝鸡有一群怀揣着梦想的',
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
                 margin: const EdgeInsets.only(left: 5.0, top: 5.0, bottom: 5.0),
               ),
             ],
@@ -133,7 +139,8 @@ class _PendedPageState extends State {
                           ),
                         ),
                         new Container(
-                          padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                          padding:
+                              const EdgeInsets.only(left: 10.0, right: 10.0),
                           child: new GestureDetector(
                             child: new Image.asset(
                               'images/module_all_icon_search.png',

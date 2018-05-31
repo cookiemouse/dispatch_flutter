@@ -30,10 +30,6 @@ class _CompletePageState extends State {
                       style: new TextStyle(
                           fontSize: 20.0, fontWeight: FontWeight.w500),
                     )),
-                    new Text(
-                      '待审核',
-                      style: new TextStyle(fontSize: 16.0, color: Colors.amber),
-                    ),
                   ],
                 ),
                 new Row(
@@ -121,37 +117,6 @@ class _CompletePageState extends State {
                         ),
                         new Text('江苏省南京市雨花台区'),
                       ],
-                    ),
-                  ],
-                ),
-                new Divider(),
-                new Row(
-                  children: <Widget>[
-                    new Expanded(child: new Text('')),
-                    new Container(
-                      decoration:
-                          ModuleDecoration.textRoundRectDecorationMore(),
-                      padding: const EdgeInsets.only(
-                          left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                      child: new Text('阿三'),
-                      margin: const EdgeInsets.all(5.0),
-                    ),
-                    new Container(
-                      decoration:
-                          ModuleDecoration.textRoundRectDecorationMore(),
-                      padding: const EdgeInsets.only(
-                          left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                      child: new Text('查看路线'),
-                      margin: const EdgeInsets.all(5.0),
-                    ),
-                    new Container(
-                      decoration:
-                          ModuleDecoration.textRoundRectDecorationMore(),
-                      padding: const EdgeInsets.only(
-                          left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                      child: new Text('快速派单'),
-                      margin: const EdgeInsets.only(
-                          left: 5.0, top: 5.0, bottom: 5.0),
                     ),
                   ],
                 ),

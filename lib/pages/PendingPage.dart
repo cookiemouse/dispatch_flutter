@@ -130,7 +130,7 @@ class _PendingPageState extends State {
                     new Expanded(child: new Text('')),
                     new Container(
                       decoration:
-                          ModuleDecoration.textRoundRectDecorationMore(),
+                          ModuleDecoration.textRoundRectDecorationNormal(),
                       padding: const EdgeInsets.only(
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
                       child: new Text('阿三'),
@@ -138,7 +138,7 @@ class _PendingPageState extends State {
                     ),
                     new Container(
                       decoration:
-                          ModuleDecoration.textRoundRectDecorationMore(),
+                          ModuleDecoration.textRoundRectDecorationNormal(),
                       padding: const EdgeInsets.only(
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
                       child: new Text('查看路线'),
@@ -146,7 +146,7 @@ class _PendingPageState extends State {
                     ),
                     new Container(
                       decoration:
-                          ModuleDecoration.textRoundRectDecorationMore(),
+                          ModuleDecoration.textRoundRectDecorationNormal(),
                       padding: const EdgeInsets.only(
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
                       child: new Text('快速派单'),
