@@ -12,6 +12,48 @@ class ModuleDecoration {
     );
   }
 
+  static itemRoundRectDecorationGradientBlue() {
+    Radius radius = new Radius.circular(5.0);
+    return new ShapeDecoration(
+      gradient: new LinearGradient(colors: <Color>[
+        Colors.blue,
+        Colors.lightBlueAccent[200],
+      ]),
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.all(radius),
+        side: new BorderSide(color: Colors.transparent, width: 10.0),
+      ),
+    );
+  }
+
+  static itemRoundRectDecorationGradientOrange() {
+    Radius radius = new Radius.circular(5.0);
+    return new ShapeDecoration(
+      gradient: new LinearGradient(colors: <Color>[
+        Colors.orange,
+        Colors.orangeAccent[200],
+      ]),
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.all(radius),
+        side: new BorderSide(color: Colors.transparent, width: 10.0),
+      ),
+    );
+  }
+
+  static itemRoundRectDecorationGradientGreen() {
+    Radius radius = new Radius.circular(5.0);
+    return new ShapeDecoration(
+      gradient: new LinearGradient(colors: <Color>[
+        Colors.green,
+        Colors.greenAccent[200],
+      ]),
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.all(radius),
+        side: new BorderSide(color: Colors.transparent, width: 10.0),
+      ),
+    );
+  }
+
   static editRoundRectDecoration() {
     Radius radius = new Radius.circular(5.0);
     return new ShapeDecoration(
@@ -38,6 +80,17 @@ class ModuleDecoration {
     Radius radius = new Radius.circular(15.0);
     return new ShapeDecoration(
       color: Colors.white,
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.all(radius),
+        side: new BorderSide(color: Colors.blue, width: 1.0),
+      ),
+    );
+  }
+
+  static buttonRoundRectDecorationBlue() {
+    Radius radius = new Radius.circular(15.0);
+    return new ShapeDecoration(
+      color: Colors.blue,
       shape: new RoundedRectangleBorder(
         borderRadius: new BorderRadius.all(radius),
         side: new BorderSide(color: Colors.blue, width: 1.0),

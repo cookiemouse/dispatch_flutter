@@ -149,7 +149,10 @@ class _OrderPageState extends State {
                           ModuleDecoration.textRoundRectDecorationBlue(),
                       padding: const EdgeInsets.only(
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                      child: new Text('签到', style: new TextStyle(color: Colors.blue),),
+                      child: new Text(
+                        '签到',
+                        style: new TextStyle(color: Colors.blue),
+                      ),
                       margin: const EdgeInsets.only(
                           left: 5.0, top: 5.0, bottom: 5.0),
                     ),
@@ -177,7 +180,8 @@ class _OrderPageState extends State {
           children: <Widget>[
             new ModuleTitleOrder(title: '订单任务'),
             new Container(
-              margin: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
+              margin:
+                  const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
               decoration: ModuleDecoration.editRoundRectDecoration(),
               child: new Row(
                 children: <Widget>[

@@ -4,6 +4,7 @@ import 'pages/TestPage.dart';
 import 'pages/ManagerHomePage.dart';
 import 'pages/WorkerHomePage.dart';
 import 'pages/ModifyPasswordPage.dart';
+import 'pages/StartPage.dart';
 
 ManagerHomePage _mManagerHomePage = new ManagerHomePage(page: 0,);
 WorkerHomePage _mWorkerHomePage = new WorkerHomePage(page: 0,);
@@ -17,6 +18,7 @@ void main() => runApp(new MaterialApp(
         '/managerhome': (context) => _mManagerHomePage,
         '/workerhome': (context) => _mWorkerHomePage,
         '/modifypassword': (context) => _mModifyPasswordPage,
+        '/start': (context) => new StartPage(),
         '/test': (context) => new TestPage(),
       },
     ));

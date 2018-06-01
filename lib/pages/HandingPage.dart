@@ -141,7 +141,12 @@ class _HandingPageState extends State {
                           ModuleDecoration.textRoundRectDecorationBlue(),
                       padding: const EdgeInsets.only(
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                      child: new Text('开始', style: new TextStyle(color: Colors.blue),),
+                      child: new GestureDetector(
+                        child: new Text('开始', style: new TextStyle(color: Colors.blue),),
+                        onTap: (){
+                          Navigator.pushNamed(context, '/start');
+                        },
+                      ),
                       margin: const EdgeInsets.only(
                           left: 5.0, top: 5.0, bottom: 5.0),
                     ),
