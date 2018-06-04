@@ -20,7 +20,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
               color: Colors.blue,
             ),
             new Container(
-              margin: const EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(top: 40.0, left: 30.0, right: 30.0),
               child: new Row(
                 children: <Widget>[
                   new Text('原密码：',
@@ -40,10 +40,10 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
               child: new Divider(
                 color: Colors.blue,
               ),
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(left: 30.0, right: 30.0),
             ),
             new Container(
-              margin: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(top: 20.0, left: 30.0, right: 30.0),
               child: new Row(
                 children: <Widget>[
                   new Text('新密码：',
@@ -64,10 +64,10 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
               child: new Divider(
                 color: Colors.blue,
               ),
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(left: 30.0, right: 30.0),
             ),
             new Container(
-              margin: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(top: 20.0, left: 30.0, right: 30.0),
               child: new Row(
                 children: <Widget>[
                   new Text(
@@ -89,11 +89,14 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
               child: new Divider(
                 color: Colors.blue,
               ),
-              margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(left: 30.0, right: 30.0),
             ),
             new Container(
-              margin: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+              margin: const EdgeInsets.only(top: 40.0, left: 30.0, right: 30.0),
+              height: 45.0,
+              width: 300.0,
               child: new RaisedButton(
+                  color: Colors.blue,
                   child: new Text(
                     '确认',
                     style: new TextStyle(fontSize: 18.0, color: Colors.white),
