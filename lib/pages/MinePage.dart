@@ -16,55 +16,60 @@ class MinePage extends StatelessWidget {
             margin: new EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 0.0),
             padding: new EdgeInsets.fromLTRB(15.0, 8.0, 15.0, 8.0),
             color: Colors.white,
-            child: new Row(
-              children: <Widget>[
-                new Container(
-                  margin: new EdgeInsets.fromLTRB(0.0, 0.0, 15.0, 0.0),
-                  child: new Image.asset(
-                    'images/module_mine_icon_statistics.png',
-                    width: 24.0,
-                    height: 24.0,
+            child: new GestureDetector(
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    margin: new EdgeInsets.fromLTRB(0.0, 0.0, 15.0, 0.0),
+                    child: new Image.asset(
+                      'images/module_mine_icon_statistics.png',
+                      width: 24.0,
+                      height: 24.0,
+                    ),
                   ),
-                ),
-                new Expanded(
-                  child: new Text('安装数量统计'),
-                  flex: 1,
-                ),
-                new Image.asset(
-                  'images/module_all_icon_forward.png',
-                  width: 32.0,
-                  height: 32.0,
-                ),
-              ],
+                  new Expanded(
+                    child: new Text('安装数量统计'),
+                    flex: 1,
+                  ),
+                  new Image.asset(
+                    'images/module_all_icon_forward.png',
+                    width: 32.0,
+                    height: 32.0,
+                  ),
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/statistics');
+              },
             ),
           ),
           new Container(
             margin: new EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
             padding: new EdgeInsets.fromLTRB(15.0, 8.0, 15.0, 8.0),
             color: Colors.white,
-            child: new Row(
-              children: <Widget>[
-                new Container(
-                  margin: new EdgeInsets.fromLTRB(0.0, 0.0, 15.0, 0.0),
-                  child: new Image.asset(
-                    'images/module_mine_icon_password.png',
-                    width: 24.0,
-                    height: 24.0,
+            child: new GestureDetector(
+              child: new Row(
+                children: <Widget>[
+                  new Container(
+                    margin: new EdgeInsets.fromLTRB(0.0, 0.0, 15.0, 0.0),
+                    child: new Image.asset(
+                      'images/module_mine_icon_password.png',
+                      width: 24.0,
+                      height: 24.0,
+                    ),
                   ),
-                ),
-                new Expanded(
-                    child: new GestureDetector(
-                  child: new Text('修改密码'),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/modifypassword');
-                  },
-                )),
-                new Image.asset(
-                  'images/module_all_icon_forward.png',
-                  width: 32.0,
-                  height: 32.0,
-                ),
-              ],
+                  new Expanded(
+                      child: new Text('修改密码'),),
+                  new Image.asset(
+                    'images/module_all_icon_forward.png',
+                    width: 32.0,
+                    height: 32.0,
+                  ),
+                ],
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, '/modifypassword');
+              },
             ),
           ),
           new Container(

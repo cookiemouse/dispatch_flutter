@@ -1,4 +1,4 @@
-# flutter_dispatch
+# flutterdispatch
 
 A new Flutter application.
 

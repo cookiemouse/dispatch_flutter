@@ -1,4 +1,4 @@
-name: flutter_dispatch
+name: flutterdispatch
 description: A new Flutter application.
 
 dependencies:
@@ -27,41 +27,41 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/module_login_icon_logo.png
-    - images/module_login_icon_account.png
-    - images/module_login_icon_password.png
-    - images/module_login_icon_password.png
-    - images/module_login_check_remenber_true.png
-    - images/module_login_check_remenber_false.png
-    - images/module_all_icon_forward.png
-    - images/module_background.jpg
+      - images/module_login_icon_logo.png
+      - images/module_login_icon_account.png
+      - images/module_login_icon_password.png
+      - images/module_login_icon_password.png
+      - images/module_login_check_remenber_true.png
+      - images/module_login_check_remenber_false.png
+      - images/module_all_icon_forward.png
+      - images/module_background.jpg
 
-  # icon
-    - images/module_all_icon_search.png
-    - images/module_all_icon_switch_role.png
-    - images/module_all_icon_popup.png
-    - images/module_all_icon_locate.png
-    - images/module_all_icon_back.png
+    # icon
+      - images/module_all_icon_search.png
+      - images/module_all_icon_switch_role.png
+      - images/module_all_icon_popup.png
+      - images/module_all_icon_locate.png
+      - images/module_all_icon_back.png
 
-  # HomePage导航
-    - images/module_home_page_handing_true.png
-    - images/module_home_page_handing_false.png
-    - images/module_home_page_mine_true.png
-    - images/module_home_page_mine_false.png
-    - images/module_home_page_pended_true.png
-    - images/module_home_page_pended_false.png
-    - images/module_home_page_pending_true.png
-    - images/module_home_page_pending_false.png
-    - images/module_home_page_doing_false.png
-    - images/module_home_page_doing_true.png
+    # HomePage导航
+      - images/module_home_page_handing_true.png
+      - images/module_home_page_handing_false.png
+      - images/module_home_page_mine_true.png
+      - images/module_home_page_mine_false.png
+      - images/module_home_page_pended_true.png
+      - images/module_home_page_pended_false.png
+      - images/module_home_page_pending_true.png
+      - images/module_home_page_pending_false.png
+      - images/module_home_page_doing_false.png
+      - images/module_home_page_doing_true.png
 
-  # Mine
-    - images/module_mine_icon_password.png
-    - images/module_mine_icon_statistics.png
+    # Mine
+      - images/module_mine_icon_password.png
+      - images/module_mine_icon_statistics.png
 
-  # Item
-    - images/module_item_icon_address.png
-    - images/module_item_icon_order.png
+    # Item
+      - images/module_item_icon_address.png
+      - images/module_item_icon_order.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

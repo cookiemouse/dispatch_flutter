@@ -5,11 +5,11 @@ import '../resources/ModuleDecoration.dart';
 class ChoiceWorkerPage extends StatefulWidget {
   @override
   State createState() {
-    return new _ChoiceWorkerPage();
+    return new _ChoiceWorkerPageState();
   }
 }
 
-class _ChoiceWorkerPage extends State {
+class _ChoiceWorkerPageState extends State {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
