@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color mColor;
+String mTitle;
 
 class ModuleTitleBack extends StatelessWidget {
   final String title;
@@ -11,6 +12,11 @@ class ModuleTitleBack extends StatelessWidget {
       mColor = Colors.transparent;
     } else {
       mColor = color;
+    }
+    if (null == title) {
+      mTitle = '';
+    } else {
+      mTitle = title;
     }
   }
 
@@ -35,11 +41,13 @@ class ModuleTitleBack extends StatelessWidget {
           ),
           new Center(
             child: new Text(
-              title,
+              mTitle,
               style: const TextStyle(color: Colors.white, fontSize: 18.0),
             ),
           ),
-          new Divider(color: Colors.transparent,)
+          new Divider(
+            color: Colors.transparent,
+          )
         ],
       ),
     );

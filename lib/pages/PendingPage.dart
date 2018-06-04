@@ -149,7 +149,12 @@ class _PendingPageState extends State {
                           ModuleDecoration.textRoundRectDecorationNormal(),
                       padding: const EdgeInsets.only(
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
-                      child: new Text('快速派单'),
+                      child: new GestureDetector(
+                        child: new Text('快速派单'),
+                        onTap: (){
+                          Navigator.pushNamed(context, '/choiceworker');
+                        },
+                      ),
                       margin: const EdgeInsets.only(
                           left: 5.0, top: 5.0, bottom: 5.0),
                     ),

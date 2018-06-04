@@ -65,6 +65,17 @@ class ModuleDecoration {
     );
   }
 
+  static editRoundRectDecorationBlue() {
+    Radius radius = new Radius.circular(5.0);
+    return new ShapeDecoration(
+      color: Colors.white,
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.all(radius),
+        side: new BorderSide(color: Colors.blue, width: 1.0),
+      ),
+    );
+  }
+
   static textRoundRectDecorationNormal() {
     Radius radius = new Radius.circular(15.0);
     return new ShapeDecoration(
