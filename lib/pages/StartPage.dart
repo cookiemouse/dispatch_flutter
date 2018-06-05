@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/ModuleTitleBack.dart';
 import '../resources/ModuleDecoration.dart';
+import '../resources/ModuleBorder.dart';
 
 class StartPage extends StatefulWidget {
   @override
@@ -11,45 +12,49 @@ class StartPage extends StatefulWidget {
 
 class _StartPageState extends State<StartPage> {
   Widget makeItem(BuildContext context, int index) {
-    Widget item = new Container(
-      margin: const EdgeInsets.all(10.0),
-      padding: const EdgeInsets.all(5.0),
-      decoration: ModuleDecoration.itemRoundRectDecorationGradientBlue(),
-      child: new RichText(
-        text: new TextSpan(children: <TextSpan>[
-          new TextSpan(
-            text: '车架号\nLBVNU39059SC30777\n\n派单数量 ',
-          ),
-          new TextSpan(
-              text: '有线 ', style: new TextStyle(color: Colors.grey[400])),
-          new TextSpan(
-            text: '1',
-          ),
-          new TextSpan(
-              text: ' 个，无线 ', style: new TextStyle(color: Colors.grey[400])),
-          new TextSpan(
-            text: '0',
-          ),
-          new TextSpan(text: ' 个\n\n'),
-          new TextSpan(
-            text: '完成数量 ',
-          ),
-          new TextSpan(
-              text: '有线 ', style: new TextStyle(color: Colors.grey[400])),
-          new TextSpan(
-            text: '0',
-          ),
-          new TextSpan(
-              text: ' 个，无线 ', style: new TextStyle(color: Colors.grey[400])),
-          new TextSpan(
-            text: '0',
-          ),
-          new TextSpan(text: ' 个'),
-        ]),
+    Widget item = new GestureDetector(
+      child: new Container(
+        margin: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(5.0),
+        decoration: ModuleDecoration.itemRoundRectDecorationGradientBlue(),
+        child: new RichText(
+          text: new TextSpan(children: <TextSpan>[
+            new TextSpan(
+              text: '车架号\nLBVNU39059SC30777\n\n派单数量 ',
+            ),
+            new TextSpan(
+                text: '有线 ', style: new TextStyle(color: Colors.grey[400])),
+            new TextSpan(
+              text: '1',
+            ),
+            new TextSpan(
+                text: ' 个，无线 ', style: new TextStyle(color: Colors.grey[400])),
+            new TextSpan(
+              text: '0',
+            ),
+            new TextSpan(text: ' 个\n\n'),
+            new TextSpan(
+              text: '完成数量 ',
+            ),
+            new TextSpan(
+                text: '有线 ', style: new TextStyle(color: Colors.grey[400])),
+            new TextSpan(
+              text: '0',
+            ),
+            new TextSpan(
+                text: ' 个，无线 ', style: new TextStyle(color: Colors.grey[400])),
+            new TextSpan(
+              text: '0',
+            ),
+            new TextSpan(text: ' 个'),
+          ]),
+        ),
       ),
+      onTap: () {
+        Navigator.pushNamed(context, '/install');
+      },
     );
 
-    Radius radius = new Radius.circular(30.0);
     Widget button = new Container(
         margin: const EdgeInsets.only(
             left: 80.0, right: 80.0, bottom: 100.0, top: 30.0),
@@ -63,10 +68,7 @@ class _StartPageState extends State<StartPage> {
                 ),
               ),
               color: Colors.blue[400],
-              shape: new RoundedRectangleBorder(
-                borderRadius: new BorderRadius.all(radius),
-                side: new BorderSide(color: Colors.blue[300], width: 1.0),
-              ),
+              shape: ModuleBorder.buttonRoundBorder(),
               onPressed: () {}),
         ));
 

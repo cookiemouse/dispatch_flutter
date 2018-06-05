@@ -42,6 +42,9 @@ flutter:
       - images/module_all_icon_popup.png
       - images/module_all_icon_locate.png
       - images/module_all_icon_back.png
+      - images/module_install_pic_icon_delete.png
+      - images/module_all_icon_carno.png
+      - images/mojule_all_icon_camera.png
 
     # HomePage导航
       - images/module_home_page_handing_true.png

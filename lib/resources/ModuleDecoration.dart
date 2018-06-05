@@ -12,6 +12,20 @@ class ModuleDecoration {
     );
   }
 
+  static itemRoundRectShadowDecoration() {
+    Radius radius = new Radius.circular(5.0);
+    return new ShapeDecoration(
+      color: Colors.white,
+      shadows: <BoxShadow>[
+        new BoxShadow(color: Colors.grey[400], blurRadius: 4.0, offset: new Offset(0.0, 2.0)),
+      ],
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.all(radius),
+        side: new BorderSide(color: Colors.transparent, width: 10.0),
+      ),
+    );
+  }
+
   static itemRoundRectDecorationTop() {
     Radius radius = new Radius.circular(5.0);
     return new ShapeDecoration(
