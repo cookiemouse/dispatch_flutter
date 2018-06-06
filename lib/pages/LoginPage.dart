@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdispatch/utils/RegU.dart';
+import '../dialog/MessageDialog.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -10,6 +12,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State {
   bool mRememberChecked = true;
 
+  static String mAccount = '';
+
   Image getCheckImage() {
     return new Image.asset(
       mRememberChecked
@@ -19,6 +23,23 @@ class _LoginPageState extends State {
       height: 24.0,
     );
   }
+
+  TextField fieldAccount = new TextField(
+
+    autocorrect: true,
+    maxLines: 1,
+    decoration: new InputDecoration(
+        hintText: '请输入账号', border: InputBorder.none),
+    obscureText: false,
+    onChanged: (str){
+      print('onChanged.mAccount-1->$str');
+      mAccount = str;
+      print('onChanged.mAccount-2->$mAccount\n');
+    },
+    onSubmitted: (str){
+      print('onSubmitted.mAccount-->$str');
+    },
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -45,13 +66,7 @@ class _LoginPageState extends State {
                   ),
                   new Expanded(
                       flex: 1,
-                      child: new TextField(
-                        autocorrect: true,
-                        maxLines: 1,
-                        decoration: new InputDecoration(
-                            hintText: '请输入账号', border: InputBorder.none),
-                        obscureText: false,
-                      )),
+                      child: fieldAccount),
                 ],
               ),
               margin: new EdgeInsets.fromLTRB(20.0, 0.0, 10.0, 0.0),
@@ -121,8 +136,11 @@ class _LoginPageState extends State {
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
-                    Navigator.pushNamed(context, '/managerhome');
+//                    Navigator.pushNamed(context, '/managerhome');
 //                    Navigator.pushNamed(context, '/test');
+                    if (RegU.isEmpty(mAccount)) {
+                    }
+                      showDialog(mAccount);
                   }),
               margin: const EdgeInsets.only(top: 80.0, bottom: 50.0),
             ), //登录按钮
@@ -130,6 +148,23 @@ class _LoginPageState extends State {
           ],
         ),
       ),
+    );
+  }
+
+  //  显示对话框
+  void showDialog(String msg) {
+    MessageDialog.showMessage(
+      context,
+      msg,
+      children: <FlatButton>[
+        new FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: new Text('确认'),
+        ),
+      ],
+      outDismissible: false,
     );
   }
 }
