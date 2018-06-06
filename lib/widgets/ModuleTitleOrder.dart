@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+const String CHANNEL = 'dispatch.cookiemouse.cn/map';
+const platform = const MethodChannel(CHANNEL);
 
 class ModuleTitleOrder extends StatelessWidget {
   final String title;
@@ -36,6 +40,8 @@ class ModuleTitleOrder extends StatelessWidget {
               width: 32.0,
               height: 32.0,
             ),
+            onTap: () {
+            },
           ),
         ],
       ),

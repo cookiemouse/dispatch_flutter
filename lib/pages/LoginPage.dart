@@ -124,7 +124,7 @@ class _LoginPageState extends State {
                     Navigator.pushNamed(context, '/managerhome');
 //                    Navigator.pushNamed(context, '/test');
                   }),
-              margin: new EdgeInsets.fromLTRB(10.0, 80.0, 10.0, 50.0),
+              margin: const EdgeInsets.only(top: 80.0, bottom: 50.0),
             ), //登录按钮
             new Text('汽车金融数据经济构筑者')
           ],
