@@ -12,7 +12,6 @@ class MessageDialog{
       barrierDismissible: outDismissible, // user must tap button!
       builder: (BuildContext context) {
         return new AlertDialog(
-//          title: new Text('Rewind and remember'),
           content: new SingleChildScrollView(
             child: new Text(msg),
           ),

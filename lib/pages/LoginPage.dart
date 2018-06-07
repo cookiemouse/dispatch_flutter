@@ -186,7 +186,7 @@ class _LoginPageState extends State {
           child: new Text('确认'),
         ),
       ],
-      outDismissible: false,
+      outDismissible: true,
     );
   }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../resources/ModuleDecoration.dart';
 import '../widgets/ModuleTitlePend.dart';
+import '../dialog/PopDialog.dart';
 
 class PendedPage extends StatefulWidget {
   @override
@@ -101,6 +102,65 @@ class _PendedPageState extends State {
     );
   }
 
+  Widget _pop = new Container(
+    alignment: Alignment.topRight,
+    margin: const EdgeInsets.only(top: 30.0),
+    child: new Stack(
+      alignment: Alignment.topRight,
+      children: <Widget>[
+        new Container(
+          alignment: Alignment.topRight,
+          margin: const EdgeInsets.only(right: 23.0),
+          child: new Image.asset(
+            'images/module_pop_icon_triangle.png',
+            width: 28.0,
+            height: 28.0,
+          ),
+        ),
+        new Container(
+          margin: const EdgeInsets.only(top: 20.0, right: 15.0),
+          width: 180.0,
+          height: 90.0,
+          decoration: ModuleDecoration.itemRoundRectDecoration(),
+          child: new Material(
+            color: Colors.white,
+            child: new Column(
+              children: <Widget>[
+                new SizedBox(
+                  height: 34.0,
+                  child: new InkWell(
+                    child: new Align(
+                      alignment: Alignment.centerLeft,
+                      child: new Text(
+                        '已派单',
+                        style: new TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                    onTap: (){},
+                  ),
+                ),
+                new Divider(height: 1.0,),
+                new SizedBox(
+                  height: 34.0,
+                  child: new InkWell(
+                    child: new Align(
+                      alignment: Alignment.centerLeft,
+                      child: new Text(
+                        '改约不通过',
+                        style: new TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                    onTap: (){},
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -109,7 +169,9 @@ class _PendedPageState extends State {
         backgroundColor: Colors.transparent,
         body: new Column(
           children: <Widget>[
-            new ModuleTitlePend(title: '已处理'),
+            new ModuleTitlePend(title: '已处理', callback: (){
+              PopDialog.showPop(context, _pop);
+            },),
             new Expanded(
               child: new Stack(
                 children: <Widget>[

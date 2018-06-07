@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class ModuleTitlePend extends StatelessWidget {
   final String title;
+  final VoidCallback callback;
 
-  ModuleTitlePend({this.title});
+  ModuleTitlePend({this.title, this.callback});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class ModuleTitlePend extends StatelessWidget {
               width: 32.0,
               height: 32.0,
             ),
-            onTap: (){
+            onTap: () {
               Navigator.pushNamed(context, '/workerhome');
             },
           ),
@@ -36,6 +37,11 @@ class ModuleTitlePend extends StatelessWidget {
               width: 32.0,
               height: 32.0,
             ),
+            onTap: () {
+              callback();
+              print('PopupWindow');
+//              showPop(context);
+            },
           ),
         ],
       ),

@@ -90,12 +90,13 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
         height: 45.0,
         width: 300.0,
         child: new RaisedButton(
-            color: Colors.blue,
-            child: new Text(
-              '确认',
-              style: new TextStyle(fontSize: 18.0, color: Colors.white),
-            ),
-            onPressed: () {}),
+          color: Colors.blue,
+          child: new Text(
+            '确认',
+            style: new TextStyle(fontSize: 18.0, color: Colors.white),
+          ),
+          onPressed: () {},
+        ),
       ),
     ],
   );

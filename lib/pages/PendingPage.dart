@@ -1,7 +1,7 @@
-import 'dart:async';
 import '../resources/ModuleDecoration.dart';
 import 'package:flutter/material.dart';
 import '../widgets/ModuleTitlePend.dart';
+import '../dialog/PopDialog.dart';
 
 class PendingPage extends StatefulWidget {
   @override
@@ -151,7 +151,7 @@ class _PendingPageState extends State {
                           left: 12.0, right: 12.0, top: 2.0, bottom: 2.0),
                       child: new GestureDetector(
                         child: new Text('快速派单'),
-                        onTap: (){
+                        onTap: () {
                           Navigator.pushNamed(context, '/choiceworker');
                         },
                       ),
@@ -172,12 +172,89 @@ class _PendingPageState extends State {
     );
   }
 
+  Widget _pop = new Container(
+    alignment: Alignment.topRight,
+    margin: const EdgeInsets.only(top: 30.0),
+    child: new Stack(
+      alignment: Alignment.topRight,
+      children: <Widget>[
+        new Container(
+          alignment: Alignment.topRight,
+          margin: const EdgeInsets.only(right: 23.0),
+          child: new Image.asset(
+            'images/module_pop_icon_triangle.png',
+            width: 28.0,
+            height: 28.0,
+          ),
+        ),
+        new Container(
+          margin: const EdgeInsets.only(top: 20.0, right: 15.0),
+          width: 180.0,
+          height: 124.0,
+          decoration: ModuleDecoration.itemRoundRectDecoration(),
+          child: new Material(
+            color: Colors.white,
+            child: new Column(
+              children: <Widget>[
+                new SizedBox(
+                  height: 34.0,
+                  child: new InkWell(
+                    child: new Align(
+                      alignment: Alignment.centerLeft,
+                      child: new Text(
+                        '待派单',
+                        style: new TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                    onTap: (){},
+                  ),
+                ),
+                new Divider(height: 1.0,),
+                new SizedBox(
+                  height: 34.0,
+                  child: new InkWell(
+                    child: new Align(
+                      alignment: Alignment.centerLeft,
+                      child: new Text(
+                        '安装退回',
+                        style: new TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                    onTap: (){},
+                  ),
+                ),
+                new Divider(height: 1.0,),
+                new SizedBox(
+                  height: 34.0,
+                  child: new InkWell(
+                    child: new Align(
+                      alignment: Alignment.centerLeft,
+                      child: new Text(
+                        '待审核',
+                        style: new TextStyle(fontSize: 14.0),
+                      ),
+                    ),
+                    onTap: (){},
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
-
     Widget _page = new Column(
       children: <Widget>[
-        new ModuleTitlePend(title: '待处理'),
+        new ModuleTitlePend(
+          title: '待处理',
+          callback: () {
+            PopDialog.showPop(context, _pop);
+          },
+        ),
         new Container(
           margin: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 8.0),
           decoration: ModuleDecoration.editRoundRectDecoration(),
