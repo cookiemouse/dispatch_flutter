@@ -163,11 +163,8 @@ class _LoginPageState extends State {
     return new Scaffold(
       backgroundColor: Colors.white,
       body: new Center(
-        child: new SafeArea(
-          bottom: true,
-          child: new SingleChildScrollView(
-            child: page,
-          ),
+        child: new SingleChildScrollView(
+          child: page,
         ),
       ),
     );

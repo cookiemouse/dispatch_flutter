@@ -9,7 +9,8 @@ class ModifyPasswordPage extends StatefulWidget {
 }
 
 class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
-  Widget _page = new Column(
+  Widget _page = new ListView(
+    padding: const EdgeInsets.all(0.0),
     children: <Widget>[
       new ModuleTitleBack(
         title: '派工',

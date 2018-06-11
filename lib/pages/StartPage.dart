@@ -61,15 +61,18 @@ class _StartPageState extends State<StartPage> {
         child: new SizedBox(
           height: 45.0,
           child: new RaisedButton(
-              child: new Text(
-                '提交订单',
-                style: new TextStyle(
-                  color: Colors.white,
-                ),
+            child: new Text(
+              '提交订单',
+              style: new TextStyle(
+                color: Colors.white,
               ),
-              color: Colors.blue[400],
-              shape: ModuleBorder.buttonRoundBorder(),
-              onPressed: () {}),
+            ),
+            color: Colors.blue[400],
+            shape: ModuleBorder.buttonRoundBorder(),
+            onPressed: () {
+              Navigator.pushNamed(context, '/editreason');
+            },
+          ),
         ));
 
     //  返回两种布局
