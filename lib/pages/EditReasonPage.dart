@@ -29,8 +29,7 @@ class _EditReasonPageState extends State {
                 new Container(
                   decoration: ModuleDecoration.editRoundRectDecorationReason(),
                   height: 380.0,
-                  margin:
-                      const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+                  margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
                   child: new TextField(
                     onChanged: (str) {
                       mStr = str;
@@ -61,7 +60,8 @@ class _EditReasonPageState extends State {
                   ),
                 ),
                 new Container(
-                  margin: const EdgeInsets.only(top: 20.0, left: 100.0, right: 100.0),
+                  margin: const EdgeInsets.only(
+                      top: 20.0, left: 100.0, right: 100.0),
                   height: 48.0,
                   child: new RaisedButton(
                     child: new Text(
